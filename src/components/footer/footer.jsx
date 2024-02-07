@@ -1,7 +1,8 @@
 import React from 'react';
 import './footer.css';
+import PropTypes from 'prop-types';
 
-export default function footer(props){
+export default function Footer(props){
   return (
     <>
      <footer className="footer">
@@ -10,3 +11,7 @@ export default function footer(props){
     </>
   );
 };
+
+Footer.propTypes = {
+  data : PropTypes.string.isRequired, 
+}

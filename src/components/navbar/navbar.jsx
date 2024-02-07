@@ -1,7 +1,8 @@
 import React from 'react';
 import './navbar.css';
+import PropTypes from 'prop-types';
 
-export default function navbar(props){
+export default function Navbar(props){
   return (
     <>
       <nav>
@@ -15,3 +16,10 @@ export default function navbar(props){
     </>
   );
 };
+
+Navbar.propTypes = { 
+  home : PropTypes.string.isRequired, 
+  about : PropTypes.string.isRequired,
+  contact : PropTypes.string.isRequired,
+  more : PropTypes.string.isRequired,
+}

@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function body(props){
+export default function Body(props){
   return (
     <>
      <dt> {props.title} </dt>
@@ -8,3 +9,8 @@ export default function body(props){
     </>
   );
 };
+
+Body.propTypes = {
+  title : PropTypes.string.isRequired,
+  data : PropTypes.string.isRequired,
+}
