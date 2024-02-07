@@ -15,3 +15,7 @@ export default function Footer(props){
 Footer.propTypes = {
   data : PropTypes.string.isRequired, 
 }
+
+Footer.defaultProps = {
+  data : 'it will updated soon bm',
+}

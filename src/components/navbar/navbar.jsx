@@ -22,4 +22,11 @@ Navbar.propTypes = {
   about : PropTypes.string.isRequired,
   contact : PropTypes.string.isRequired,
   more : PropTypes.string.isRequired,
+} 
+
+Navbar.defaultProps = {
+  home : 'home text ',
+  about : 'about text ',
+  contact : 'contact text ',
+  more : 'more text ',
 }

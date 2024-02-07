@@ -13,7 +13,7 @@ export default function App() {
   }
   return (
     <>
-      <Navbar home='home' about='about' more='more' contact=' contact'/>
+      <Navbar home='home' about='about' more='more' contact=' contact'/> 
       <div className="content">
      <p className="type"> different type of casing in coding </p>
    <Data title="camelcase" data={object.camel}/>

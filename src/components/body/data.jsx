@@ -14,3 +14,8 @@ Body.propTypes = {
   title : PropTypes.string.isRequired,
   data : PropTypes.string.isRequired,
 }
+
+Body.defaultProps = {
+  title : 'title add soon',
+  data : 'data add soon ',
+}
