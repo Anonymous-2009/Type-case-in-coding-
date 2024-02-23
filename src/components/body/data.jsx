@@ -1,32 +1,30 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './data.css'
 
 export default function Body(){
-  const [data, setData] = useState([{
-  title: 'camelcase',
-  description:'capitalizing words without spaces for readability in programming'
-},{
-  title: 'traincase',
-  description:'separating words with underscores to improve readability in programming conventions'
-},{
-  title: 'pascalcase',
-  description:'cpitalizing words without spaces for improved programming clarity'
-},{
-  title: 'snakecase',
-  description:'Joining words with hyphens for clear naming in programming styles'
-},{
-  title: 'kebabcase',
-  description:'Joining words with hyphens for clear naming in programming styles'
-}]
-);
+ 
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    const result = await fetch(' https://f6717121640e4a468d11f3fa642f05ea.api.mockbin.io/');
+    const response = await result.json();
+    setData(response);
+    console.log(result);
+    console.log(setData);
+}
+  
+    useEffect(() => {
+      fetchData();
+    },[]);
+  
   return (
     <>
       {data.map((props) => {
        return (
          <> 
-        <div class='data'>
+        <div className='data' key={props.title}>
          <p> {props.title} </p>
          <p> {props.description}</p>
         </div>
