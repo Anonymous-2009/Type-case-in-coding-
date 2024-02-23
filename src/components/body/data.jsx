@@ -1,19 +1,21 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './data.css'
+import './data.css';
+import axios from 'axios';
 
 export default function Body(){
  
   const [data, setData] = useState([]);
 
-  const fetchData = async () => {
-    const result = await fetch(' https://f6717121640e4a468d11f3fa642f05ea.api.mockbin.io/');
-    const response = await result.json();
-    setData(response);
-    console.log(result);
-    console.log(setData);
+ const fetchData = async () => {
+   const response = await axios.post('https://f6717121640e4a468d11f3fa642f05ea.api.mockbin.io/');
+  
+  const data = response.data;
+   setData(data);
 }
+
+fetchData()
   
     useEffect(() => {
       fetchData();
